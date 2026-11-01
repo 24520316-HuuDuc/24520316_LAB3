@@ -1,0 +1,50 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.app-header h1 {
+  margin: 10px 0;
+  color: #1e293b;
+}
+
+.app-header p {
+  color: #64748b;
+}
+
+.app-header .subtitle {
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.app > header {
+  display: block;
+}
+
+.app > article {
+  margin: 0 auto;
+}
+
+@media (max-width: 375px) {
+  .app {
+    padding: 30px 12px;
+  }
+}
