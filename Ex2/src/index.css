@@ -1,0 +1,192 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.directory {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.directory-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #818cf8;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.directory-header h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.directory-header p:last-child {
+  color: #94a3b8;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  align-items: end;
+  gap: 14px;
+  padding: 22px;
+  background: #151d30;
+  border: 1px solid #334155;
+  border-radius: 16px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-group label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #c7d2fe;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0b1020;
+  color: white;
+  font-size: 14px;
+}
+
+button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+.result-count {
+  display: block;
+  margin: 24px 0 14px;
+  color: #a5b4fc;
+  font-weight: bold;
+}
+
+.people-list {
+  display: grid;
+  gap: 12px;
+}
+
+.person-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: #151d30;
+}
+
+.person-card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.person-card p {
+  display: inline-block;
+  margin: 0 18px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.delete-button {
+  background: #dc2626;
+  flex-shrink: 0;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  padding: 30px;
+}
+
+@media (max-width: 650px) {
+  .controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .control-group:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    padding: 24px 12px;
+  }
+
+  .directory-header h1 {
+    font-size: 25px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .control-group:first-child {
+    grid-column: auto;
+  }
+
+  .person-card {
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  .person-card h2 {
+    font-size: 16px;
+  }
+
+  .person-card p {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .delete-button {
+    padding: 9px 11px;
+  }
+}
