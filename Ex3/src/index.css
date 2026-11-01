@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+button {
+  font-family: inherit;
+}
+
+main {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.telemetry {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.telemetry-header {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #f59e0b;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.telemetry-header h1 {
+  margin: 12px 0;
+  font-size: 34px;
+}
+
+.telemetry-header p:last-child {
+  color: #94a3b8;
+}
+
+.squad-selector,
+.telemetry-content {
+  padding: 25px;
+  margin-bottom: 22px;
+  background: #151d30;
+  border: 1px solid #334155;
+  border-radius: 16px;
+}
+
+.squad-selector h2 {
+  margin-top: 0;
+  color: #f59e0b;
+}
+
+.squad-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.squad-buttons button {
+  padding: 12px 16px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0b1020;
+  color: white;
+  cursor: pointer;
+}
+
+.squad-buttons button:hover,
+.squad-buttons button.active {
+  background: #b45309;
+  border-color: #f59e0b;
+}
+
+.status-label {
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.squad-card {
+  padding: 22px;
+  margin-top: 18px;
+  background: #0b1020;
+  border: 1px solid #475569;
+  border-radius: 12px;
+}
+
+.squad-card h2 {
+  color: #f59e0b;
+}
+
+.squad-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 25px 12px;
+  }
+
+  .telemetry-header h1 {
+    font-size: 25px;
+  }
+
+  .squad-selector,
+  .telemetry-content {
+    padding: 17px;
+  }
+
+  .squad-buttons {
+    flex-direction: column;
+  }
+}
+/* Loading skeleton */
+.skeleton-card {
+  height: 220px;
+  padding: 24px;
+  margin-top: 18px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: #0b1020;
+}
+
+.skeleton {
+  height: 14px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #1e293b 25%,
+    #334155 50%,
+    #1e293b 75%
+  );
+  background-size: 200% 100%;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-title {
+  width: 55%;
+  height: 24px;
+}
+
+.skeleton-line {
+  width: 85%;
+}
+
+@keyframes pulse {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* Error and retry */
+.error-card {
+  padding: 22px;
+  margin-top: 18px;
+  border: 1px solid #dc2626;
+  border-radius: 12px;
+  background: #30151b;
+}
+
+.error-card h2 {
+  color: #f87171;
+}
+
+.error-card p {
+  color: #fecaca;
+  line-height: 1.6;
+}
+
+.retry-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ea580c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.retry-button:hover {
+  background: #c2410c;
+}
